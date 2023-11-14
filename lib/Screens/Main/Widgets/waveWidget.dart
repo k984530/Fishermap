@@ -43,7 +43,16 @@ class _WaveWidgetState extends State<WaveWidget>
               child: ClipPath(
                 clipper: WaveClipper(_animation.value),
                 child: Container(
-                  color: Colors.blue[600],
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.blue,
+                        const Color.fromARGB(255, 9, 54, 122),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),
