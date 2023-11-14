@@ -31,7 +31,7 @@ class _WaveWidgetState extends State<WaveWidget>
     super.initState();
   }
 
-  final double waveHeight = 600;
+  final double waveHeight = 650;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

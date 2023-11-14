@@ -13,9 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: const MainScreen(),
-      getPages: [GetPage(name: '/Main', page: () => MainScreen())],
+      home: MainScreen(),
+      getPages: [
+        GetPage(
+          name: '/Main',
+          page: () => MainScreen(),
+        ),
+      ],
     );
   }
 }

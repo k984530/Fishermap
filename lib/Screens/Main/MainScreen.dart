@@ -11,12 +11,8 @@ class MainScreen extends StatelessWidget {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 0,
-            child: WaveWidget(),
-          ),
+          Container(),
+          WaveWidget(),
           Positioned(
             top: 0,
             left: 0,
