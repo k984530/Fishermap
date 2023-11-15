@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:fishermap/Screens/Main/Widgets/Custom/eyes.dart';
-import 'package:fishermap/Screens/Main/Widgets/Custom/mouse.dart';
+import 'package:fishermap/Screens/Main/Widgets/Custom/leftEye.dart';
+import 'package:fishermap/Screens/Main/Widgets/Custom/leftMouse.dart';
 import 'package:flutter/material.dart';
 import 'package:zwidget/zwidget.dart';
 

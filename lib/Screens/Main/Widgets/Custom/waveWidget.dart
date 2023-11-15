@@ -18,7 +18,7 @@ class _WaveWidgetState extends State<WaveWidget>
     _animationController = AnimationController(
       vsync: this,
       duration: Duration(
-        milliseconds: 5000,
+        milliseconds: 800,
       ),
     );
     _animation =
@@ -31,7 +31,7 @@ class _WaveWidgetState extends State<WaveWidget>
     super.initState();
   }
 
-  final double waveHeight = 650;
+  final double waveHeight = 40;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -39,19 +39,18 @@ class _WaveWidgetState extends State<WaveWidget>
       child: Stack(
         children: [
           Positioned.fill(
-            child: Container(
-              child: ClipPath(
-                clipper: WaveClipper(_animation.value),
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.blue,
-                        const Color.fromARGB(255, 9, 54, 122),
-                      ],
-                    ),
+            child: ClipPath(
+              clipper: WaveClipper(_animation.value),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.blue,
+                      const Color.fromARGB(255, 9, 54, 122),
+                    ],
                   ),
                 ),
               ),
@@ -83,9 +82,9 @@ class WaveClipper extends CustomClipper<Path> {
     return p;
   }
 
-  static const double waveHeight = 60;
-  static const double bottleSize = 80;
-  static const double waveDouble = 0.01;
+  static const double waveHeight = 25;
+  static const double bottleSize = 0;
+  static const double waveDouble = 0.05;
 
   static double getYWithX(int x, double animationValue,
       {double topMargin = bottleSize / 1.5}) {

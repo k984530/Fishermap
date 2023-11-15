@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:fishermap/Screens/Main/Widgets/Custom/eyes.dart';
-import 'package:fishermap/Screens/Main/Widgets/Custom/mouse.dart';
+import 'package:fishermap/Screens/Main/Widgets/Custom/leftEye.dart';
+import 'package:fishermap/Screens/Main/Widgets/Custom/leftMouse.dart';
 import 'package:flutter/material.dart';
 import 'package:zwidget/zwidget.dart';
 
@@ -56,7 +56,7 @@ class InfoContainer extends StatelessWidget {
           bottom: 25,
           child: CustomPaint(
             size: Size(22, 10),
-            painter: mousePainter(),
+            painter: leftMousePainter(),
           ),
         ),
         Positioned(
@@ -64,7 +64,7 @@ class InfoContainer extends StatelessWidget {
           bottom: 55,
           child: CustomPaint(
             size: Size(22, 10),
-            painter: eyePainter(),
+            painter: leftEyePainter(),
           ),
         ),
         Positioned(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class eyePainter extends CustomPainter {
-  const eyePainter();
+class rightEyePainter extends CustomPainter {
+  const rightEyePainter();
 
   @override
   void paint(Canvas canvas, Size size) {
