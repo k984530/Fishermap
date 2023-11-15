@@ -17,14 +17,16 @@ class TradeContainer extends StatelessWidget {
   final Text buyTxt = Text(
     "삽니다",
     style: TextStyle(
-      fontSize: 24,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
       color: const Color.fromARGB(255, 90, 181, 255),
     ),
   );
   final Text sellTxt = Text(
     "팝니다",
     style: TextStyle(
-      fontSize: 24,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
       color: Colors.red,
     ),
   );
@@ -64,8 +66,8 @@ class TradeContainer extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 95,
-          left: 20,
+          top: 100,
+          left: 10,
           child: ZWidget.forwards(
             midChild: buyTxt,
             midToTopChild: buyTxt,
@@ -76,8 +78,8 @@ class TradeContainer extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 0,
-          bottom: 0,
+          left: 10,
+          bottom: 20,
           child: ZWidget.forwards(
             midChild: sellTxt,
             midToTopChild: sellTxt,
@@ -144,11 +146,23 @@ class TradeContainer extends StatelessWidget {
         ),
         Positioned(
           top: 140,
-          left: 15,
+          left: 5,
           child: Column(
             children: [
               Text(
-                "2500만원\n\n2700만원",
+                "2500만원",
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
+              ),
+              Container(
+                width: 70,
+                height: 1,
+                color: Colors.white,
+              ),
+              Text(
+                "2600만원",
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.white,
@@ -158,7 +172,7 @@ class TradeContainer extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: 35,
+          bottom: 25,
           right: 10,
           child: Text(
             "더보기 >>",
@@ -187,6 +201,41 @@ class TradeContainer extends StatelessWidget {
               color: Colors.white,
               size: 13,
             ),
+          ),
+        ),
+        Positioned(
+          bottom: 60,
+          right: 5,
+          child: Column(
+            children: [
+              Text(
+                "위치",
+                style: TextStyle(
+                  fontSize: 13,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                width: 50,
+                child: Row(
+                  children: [
+                    Text(
+                      "무관",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Spacer(),
+                    Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.white,
+                      size: 23,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ],
