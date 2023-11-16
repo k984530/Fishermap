@@ -18,12 +18,6 @@ class MainScreen extends StatelessWidget {
           Container(color: Color.fromARGB(255, 1, 0, 20)),
           BackgroundWidget(),
           Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: WeatherWidget(),
-          ),
-          Positioned(
             top: 200,
             left: 0,
             child: InfoContainer(),
@@ -42,6 +36,12 @@ class MainScreen extends StatelessWidget {
             bottom: 65,
             left: 10,
             child: TownContainer(),
+          ),
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: WeatherWidget(),
           ),
           Positioned(
             bottom: 10,
