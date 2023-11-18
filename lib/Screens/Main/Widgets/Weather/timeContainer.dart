@@ -34,6 +34,8 @@ class timeContainer extends StatelessWidget {
                     Image.asset(
                       'assets/wheather.png',
                       width: 80,
+                      height: 80,
+                      fit: BoxFit.fill,
                     ),
                     SizedBox(
                       height: 5,
@@ -64,6 +66,8 @@ class timeContainer extends StatelessWidget {
                     Image.asset(
                       'assets/sunny3.png',
                       width: 80,
+                      height: 80,
+                      fit: BoxFit.fill,
                     ),
                     SizedBox(
                       height: 5,
@@ -94,6 +98,8 @@ class timeContainer extends StatelessWidget {
                     Image.asset(
                       'assets/wheather.png',
                       width: 80,
+                      height: 80,
+                      fit: BoxFit.fill,
                     ),
                     SizedBox(
                       height: 5,
@@ -124,6 +130,8 @@ class timeContainer extends StatelessWidget {
                     Image.asset(
                       'assets/sunny2.png',
                       width: 80,
+                      height: 80,
+                      fit: BoxFit.fill,
                     ),
                     SizedBox(
                       height: 5,
