@@ -1,4 +1,6 @@
 import 'package:fishermap/Screens/Main/Widgets/Data/weatherController.dart';
+import 'package:fishermap/Screens/Main/Widgets/Weather/dustContainer.dart';
+import 'package:fishermap/Screens/Main/Widgets/Weather/timeContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -154,6 +156,32 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                 ),
               ),
             ),
+            if (!flag.controller.value) ...[
+              Positioned(
+                top: height,
+                left: 0,
+                right: 0,
+                child: dustContainer(),
+              ),
+              Positioned(
+                top: height + 140,
+                left: 0,
+                right: 0,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "시간별",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    timeContainer(),
+                  ],
+                ),
+              ),
+            ]
           ],
         ),
       ),

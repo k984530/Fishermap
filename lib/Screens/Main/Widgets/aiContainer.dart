@@ -6,6 +6,8 @@ import 'package:fishermap/Screens/Main/Widgets/Custom/waveWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:zwidget/zwidget.dart';
 
+import '../../../Palate.dart';
+
 class AIContainer extends StatelessWidget {
   AIContainer({super.key});
 
@@ -27,7 +29,7 @@ class AIContainer extends StatelessWidget {
           height: 265,
           margin: EdgeInsets.only(top: 15),
           decoration: BoxDecoration(
-            color: Color.fromARGB(238, 0, 3, 10),
+            color: Palate.ContainerColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20),
               bottomLeft: Radius.circular(20),

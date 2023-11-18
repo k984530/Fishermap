@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:fishermap/Palate.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/leftEye.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/leftMouse.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,7 @@ class TradeContainer extends StatelessWidget {
           width: 140,
           height: 210,
           decoration: BoxDecoration(
-            color: Color.fromARGB(238, 0, 3, 10),
+            color: Palate.ContainerColor,
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(

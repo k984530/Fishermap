@@ -5,6 +5,8 @@ import 'package:fishermap/Screens/Main/Widgets/Custom/leftMouse.dart';
 import 'package:flutter/material.dart';
 import 'package:zwidget/zwidget.dart';
 
+import '../../../Palate.dart';
+
 class InfoContainer extends StatelessWidget {
   InfoContainer({super.key});
   final Text txt = Text(
@@ -26,7 +28,7 @@ class InfoContainer extends StatelessWidget {
           width: 230,
           height: 210,
           decoration: BoxDecoration(
-            color: Color.fromARGB(238, 0, 3, 10),
+            color: Palate.ContainerColor,
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(20),
               bottomRight: Radius.circular(20),

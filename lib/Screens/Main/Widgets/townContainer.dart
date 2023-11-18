@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:zwidget/zwidget.dart';
 
+import '../../../Palate.dart';
+
 class TownContainer extends StatelessWidget {
   TownContainer({super.key});
   final Text txt = Text(
@@ -24,7 +26,7 @@ class TownContainer extends StatelessWidget {
             top: 15,
           ),
           decoration: BoxDecoration(
-            color: Color.fromARGB(238, 0, 3, 10),
+            color: Palate.ContainerColor,
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
