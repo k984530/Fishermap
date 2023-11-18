@@ -1,3 +1,4 @@
+import 'package:fishermap/Screens/Information/InformationScreen.dart';
 import 'package:fishermap/Screens/Main/MainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
@@ -5,6 +6,8 @@ import 'package:get/route_manager.dart';
 import 'Screens/Weather/WeatherScreen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(
     const MyApp(),
   );
@@ -19,7 +22,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: MainScreen(),
+      // home: MainScreen(),
+      home: InformationScreen(),
       getPages: [
         GetPage(
           name: '/Main',
