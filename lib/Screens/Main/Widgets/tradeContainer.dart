@@ -4,6 +4,7 @@ import 'package:fishermap/Palate.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/leftEye.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/leftMouse.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:zwidget/zwidget.dart';
 
 class TradeContainer extends StatefulWidget {
@@ -269,11 +270,16 @@ class _TradeContainerState extends State<TradeContainer> {
         Positioned(
           bottom: 25,
           right: 10,
-          child: Text(
-            "더보기",
-            style: TextStyle(
-              fontSize: 10,
-              color: Colors.white,
+          child: GestureDetector(
+            onTap: () {
+              Get.toNamed('/Trade');
+            },
+            child: Text(
+              "더보기",
+              style: TextStyle(
+                fontSize: 10,
+                color: Colors.white,
+              ),
             ),
           ),
         ),
