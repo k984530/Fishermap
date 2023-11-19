@@ -6,8 +6,14 @@ import 'package:fishermap/Screens/Main/Widgets/Custom/leftMouse.dart';
 import 'package:flutter/material.dart';
 import 'package:zwidget/zwidget.dart';
 
-class TradeContainer extends StatelessWidget {
+class TradeContainer extends StatefulWidget {
   TradeContainer({super.key});
+
+  @override
+  State<TradeContainer> createState() => _TradeContainerState();
+}
+
+class _TradeContainerState extends State<TradeContainer> {
   final Text txt = Text(
     "어선",
     style: TextStyle(
@@ -15,6 +21,7 @@ class TradeContainer extends StatelessWidget {
       color: Colors.white,
     ),
   );
+
   final Text buyTxt = Text(
     "삽니다",
     style: TextStyle(
@@ -23,6 +30,7 @@ class TradeContainer extends StatelessWidget {
       color: const Color.fromARGB(255, 90, 181, 255),
     ),
   );
+
   final Text sellTxt = Text(
     "팝니다",
     style: TextStyle(
@@ -31,6 +39,7 @@ class TradeContainer extends StatelessWidget {
       color: Colors.red,
     ),
   );
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -109,16 +118,32 @@ class TradeContainer extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      '무게 : 6톤 급',
+                      '무게 : ',
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.white,
                       ),
                     ),
-                    Spacer(),
-                    Icon(
-                      Icons.arrow_drop_down,
-                      color: Colors.white,
+                    SizedBox(
+                      height: 20,
+                      child: DropdownButton(
+                        iconDisabledColor: Colors.white,
+                        iconEnabledColor: Colors.white,
+                        underline: SizedBox.shrink(),
+                        items: [
+                          DropdownMenuItem(
+                            child: Text(
+                              "6톤급",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                        ],
+                        onChanged: (value) {},
+                        elevation: 0,
+                      ),
                     ),
                   ],
                 ),
