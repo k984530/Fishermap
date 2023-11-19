@@ -84,30 +84,42 @@ class InformationScreen extends StatelessWidget {
                 children: [
                   Container(
                     padding: EdgeInsets.only(
-                        left: 20, right: 20, top: 15, bottom: 15),
+                        left: 20, right: 10, top: 15, bottom: 15),
                     height: 125,
                     width: double.infinity,
                     child: Align(
                       alignment: Alignment.topLeft,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      child: Row(
                         children: [
-                          Text(
-                            '${entry[index]}',
-                            style: TextStyle(
-                              fontSize: 16,
-                              letterSpacing: 2.0,
-                              color: Colors.black,
-                            ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: 300,
+                                child: Text(
+                                  '${entry[index]}',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    letterSpacing: 2.0,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                '${homePage[index]}',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  letterSpacing: 2.0,
+                                  color: Colors.black54,
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            '${homePage[index]}',
-                            style: TextStyle(
-                              fontSize: 14,
-                              letterSpacing: 2.0,
-                              color: Colors.black54,
-                            ),
+                          Image.asset(
+                            'assets/fish-bowl.png',
+                            height: 30,
+                            width: 30,
                           ),
                         ],
                       ),
