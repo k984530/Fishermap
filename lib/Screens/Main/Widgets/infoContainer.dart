@@ -1,8 +1,10 @@
 import 'dart:math';
 
+import 'package:fishermap/Palate.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/leftEye.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/leftMouse.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:zwidget/zwidget.dart';
 
 class InfoContainer extends StatelessWidget {
@@ -26,7 +28,7 @@ class InfoContainer extends StatelessWidget {
           width: 230,
           height: 210,
           decoration: BoxDecoration(
-            color: Color.fromARGB(238, 0, 3, 10),
+            color: Palate.ContainerColor,
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -149,6 +151,22 @@ class InfoContainer extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+        Positioned(
+          bottom: 10,
+          right: 10,
+          child: GestureDetector(
+            onTap: () {
+              Get.toNamed('/Information');
+            },
+            child: Text(
+              "더보기",
+              style: TextStyle(
+                fontSize: 10,
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
       ],
