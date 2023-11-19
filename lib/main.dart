@@ -38,6 +38,10 @@ class MyApp extends StatelessWidget {
           name: '/Map',
           page: () => MapScreen(),
         ),
+        GetPage(
+          name: '/Information',
+          page: () => InformationScreen(),
+        ),
       ],
     );
   }
