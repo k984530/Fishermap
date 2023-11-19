@@ -24,7 +24,7 @@ class _TownScreenEffectState extends State<TownScreenEffect> {
   }
 
   bool flag = true;
-  int timeDilation = 100;
+  int timeDilation = 1000;
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +37,8 @@ class _TownScreenEffectState extends State<TownScreenEffect> {
                 child: Image.asset(
                   'assets/village.png',
                   fit: BoxFit.cover,
-                  height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
+                  height: 10,
+                  width: 10,
                 ),
               )
             : Container(
