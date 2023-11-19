@@ -14,7 +14,7 @@ class _TownScreenEffectState extends State<TownScreenEffect> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: timeDilation), () => disapear());
+    Future.delayed(Duration(milliseconds: 100), () => disapear());
   }
 
   void disapear() {

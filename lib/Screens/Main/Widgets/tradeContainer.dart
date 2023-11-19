@@ -268,22 +268,6 @@ class _TradeContainerState extends State<TradeContainer> {
           ),
         ),
         Positioned(
-          bottom: 25,
-          right: 10,
-          child: GestureDetector(
-            onTap: () {
-              Get.toNamed('/Trade');
-            },
-            child: Text(
-              "더보기",
-              style: TextStyle(
-                fontSize: 10,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
-        Positioned(
           top: 105,
           right: 20,
           child: Container(

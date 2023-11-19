@@ -208,39 +208,41 @@ class MapScreen extends StatelessWidget {
             width: MediaQuery.of(context).size.width - 50,
             decoration: BoxDecoration(
                 color: Colors.white10, borderRadius: BorderRadius.circular(25)),
-            child: Column(
-              children: [
-                Text(
-                  "적조 속보 : 유",
-                  style: TextStyle(
-                    color: Colors.white,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Text(
+                    "적조 속보 : 유",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                Text(
-                  "패류독소 속보 : 무",
-                  style: TextStyle(
-                    color: Colors.white,
+                  Text(
+                    "패류독소 속보 : 무",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                Text(
-                  "해파리 속보 : 무",
-                  style: TextStyle(
-                    color: Colors.white,
+                  Text(
+                    "해파리 속보 : 무",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                Text(
-                  "고수온 속보 : 무",
-                  style: TextStyle(
-                    color: Colors.white,
+                  Text(
+                    "고수온 속보 : 무",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                Text(
-                  "산소부족 물덩어리 속보 : 무",
-                  style: TextStyle(
-                    color: Colors.white,
+                  Text(
+                    "산소부족 물덩어리 속보 : 무",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
