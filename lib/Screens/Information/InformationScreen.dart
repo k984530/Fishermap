@@ -6,6 +6,8 @@ class InformationScreen extends StatelessWidget {
 
   final List<String> entry = <String>[
     "귀어귀촌 캐릭터 '귀어해'를 소개합니다.",
+    "[공지] 2023년도 경상남도 귀어학교 제 3기 심화교육(선내·외기) 교육생 모집 공고",
+    "[공지] 창원시 어촌에서 살아보기(귀어인의 집) 입주희망자 모집",
     "2023년 정기교육(주말) 6기(오프라인,부산) 교육생 모집 안내(강의일시 : 11월 25일 토요일)",
     "2023년 정기교육(평일) 15기(오프라인,부산) 교육생 모집 안내(강의일시 : 11월 24일 금요일)",
     "2023년 귀어귀촌 정기교육 14기(평일, 11.10.) 교육안내(접속방법 등 안내)",
@@ -19,6 +21,8 @@ class InformationScreen extends StatelessWidget {
 
   final List<String> homePage = <String>[
     "귀어귀촌 종합센터",
+    "경상남도 귀어귀촌 종합센터",
+    "경상남도 귀어귀촌 종합센터",
     "귀어귀촌 종합센터",
     "귀어귀촌 종합센터",
     "귀어귀촌 종합센터",
@@ -63,6 +67,7 @@ class InformationScreen extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           '${entry[index]}',
