@@ -24,7 +24,7 @@ class _TownScreenEffectState extends State<TownScreenEffect> {
   }
 
   bool flag = true;
-  int timeDilation = 100;
+  int timeDilation = 1000;
 
   @override
   Widget build(BuildContext context) {
