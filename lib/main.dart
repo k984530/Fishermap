@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
 import 'Screens/Map/mapScreen.dart';
+import 'Screens/Trade/TradeScreen.dart';
 import 'Screens/Weather/WeatherScreen.dart';
 
 void main() {
@@ -41,6 +42,10 @@ class MyApp extends StatelessWidget {
           name: '/Information',
           page: () => InformationScreen(),
         ),
+        GetPage(
+          name: '/Trade',
+          page: () => TradeScreen(),
+        )
       ],
     );
   }

@@ -147,7 +147,7 @@ class AIContainer extends StatelessWidget {
               Get.toNamed('/Map');
             },
             child: Text(
-              "더보기 >>",
+              "더보기",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 10,

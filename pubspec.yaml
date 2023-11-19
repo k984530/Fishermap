@@ -39,6 +39,7 @@ dependencies:
   get: ^4.6.6
   zwidget: ^0.0.2
   schedulers: ^1.0.1
+  http: ^1.1.0
 
 dev_dependencies:
   flutter_test:
