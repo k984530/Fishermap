@@ -23,8 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      // home: MainScreen(),
-      home: InformationScreen(),
+      home: MainScreen(),
       getPages: [
         GetPage(
           name: '/Main',
