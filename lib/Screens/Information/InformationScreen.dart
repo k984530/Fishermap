@@ -37,6 +37,22 @@ class InformationScreen extends StatelessWidget {
     "경상남도 귀어귀촌 종합센터",
   ];
 
+  final List<String> homePageURL = <String>[
+    "https://www.sealife.go.kr/board/notice/view.do",
+    "https://www.gnsealife.kr/sealife/board/view.do?mId=56&brdIdx=130",
+    "https://www.gnsealife.kr/sealife/board/view.do?mId=56&brdIdx=129",
+    "https://www.sealife.go.kr/board/notice/view.do",
+    "https://www.sealife.go.kr/board/notice/view.do",
+    "https://www.sealife.go.kr/board/notice/view.do",
+    "https://www.sealife.go.kr/board/notice/view.do",
+    "http://jnsealife.or.kr/ko/110/view?SEQ=36&page=1",
+    "https://ggsealife.co.kr/kr/customer/notice/view/186/page/0",
+    "https://www.sealife.go.kr/board/notice/view.do",
+    "https://www.sealife.go.kr/board/notice/view.do",
+    "https://www.gnsealife.kr/sealife/board/view.do?mId=56&brdIdx=128",
+    "https://www.gnsealife.kr/sealife/board/view.do?mId=56&brdIdx=127",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +77,7 @@ class InformationScreen extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
               onTap: () async {
-                String url = "https://pub.dev/packages/url_launcher";
+                String url = "${homePageURL[index]}";
                 await launchUrl(Uri.parse(url));
               },
               child: Column(
@@ -75,6 +91,7 @@ class InformationScreen extends StatelessWidget {
                       alignment: Alignment.topLeft,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             '${entry[index]}',
