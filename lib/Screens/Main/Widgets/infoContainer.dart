@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zwidget/zwidget.dart';
 
+import '../../../Palate.dart';
+
 class InfoContainer extends StatelessWidget {
   InfoContainer({super.key});
   final Text txt = Text(
