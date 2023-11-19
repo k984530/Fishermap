@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:fishermap/Screens/Town/TownScreenEffect.dart';
 import 'package:flutter/material.dart';
 import 'package:zwidget/zwidget.dart';
 
@@ -57,11 +58,24 @@ class TownContainer extends StatelessWidget {
         ),
         Positioned(
           top: 50,
-          child: Container(
-            width: 150,
-            height: 150,
-            child: Image.asset(
-              'assets/village.png',
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TownScreenEffect(),
+                ),
+              );
+            },
+            child: Container(
+              width: 150,
+              height: 150,
+              child: Hero(
+                tag: 'town',
+                child: Image.asset(
+                  'assets/village.png',
+                ),
+              ),
             ),
           ),
         ),
