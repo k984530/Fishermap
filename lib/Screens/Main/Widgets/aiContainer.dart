@@ -4,6 +4,7 @@ import 'package:fishermap/Screens/Main/Widgets/Custom/rightEye.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/rightMouse.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/waveWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:zwidget/zwidget.dart';
 
 import '../../../Palate.dart';
@@ -141,14 +142,20 @@ class AIContainer extends StatelessWidget {
         Positioned(
           right: 10,
           bottom: 10,
-          child: Text(
-            "더보기 >>",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 10,
+          child: GestureDetector(
+            onTap: () {
+              Get.toNamed('/Map');
+            },
+            child: Text(
+              "더보기 >>",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 10,
+              ),
             ),
           ),
         ),
+
         // Text(
         //   "풍향, 풍속, 파향, 파속, 파고\n라니냐 엘니뇨 적조 알림",
         //   style: TextStyle(

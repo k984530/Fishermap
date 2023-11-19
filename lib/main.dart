@@ -3,6 +3,7 @@ import 'package:fishermap/Screens/Main/MainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
+import 'Screens/Map/mapScreen.dart';
 import 'Screens/Weather/WeatherScreen.dart';
 
 void main() {
@@ -32,6 +33,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/Weather',
           page: () => WeatherScreen(),
+        ),
+        GetPage(
+          name: '/Map',
+          page: () => MapScreen(),
         ),
       ],
     );
