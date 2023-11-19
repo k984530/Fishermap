@@ -82,7 +82,7 @@ class InfoContainer extends StatelessWidget {
                 width: 190,
                 alignment: Alignment.center,
                 child: Text(
-                  "2023년 정기교육(주말) 6기(오프라인)",
+                  "귀어귀촌 캐릭터 '귀어해'를 소개합니다.",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(color: Colors.white),
@@ -98,7 +98,7 @@ class InfoContainer extends StatelessWidget {
                 width: 190,
                 alignment: Alignment.center,
                 child: Text(
-                  "어촌체험휴양마을 숙박시설 귀어귀촌인 제공",
+                  "[공지] 2023년도 경상남도 귀어학교 제 3기 심화교육(선내·외기) 교육생 모집 공고",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(color: Colors.white),
@@ -114,7 +114,7 @@ class InfoContainer extends StatelessWidget {
                 width: 190,
                 alignment: Alignment.center,
                 child: Text(
-                  "2023년 어선청년임대사업 임대용어선 모집공고",
+                  "[공지] 창원시 어촌에서 살아보기(귀어인의 집) 입주희망자 모집",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(color: Colors.white),
@@ -130,7 +130,7 @@ class InfoContainer extends StatelessWidget {
                 width: 190,
                 alignment: Alignment.center,
                 child: Text(
-                  "2023년 경기도 귀어·귀촌 정착지원(3차) 공고",
+                  "2023년 정기교육(주말) 6기(오프라인,부산) 교육생 모집 안내(강의일시 : 11월 25일 토요일)",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(color: Colors.white),
@@ -146,7 +146,7 @@ class InfoContainer extends StatelessWidget {
                 width: 190,
                 alignment: Alignment.center,
                 child: Text(
-                  "청년어업인 및 임대용어선 모집공고",
+                  "2023년 정기교육(평일) 15기(오프라인,부산) 교육생 모집 안내(강의일시 : 11월 24일 금요일)",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(color: Colors.white),
