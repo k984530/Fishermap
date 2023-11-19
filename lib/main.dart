@@ -33,6 +33,10 @@ class MyApp extends StatelessWidget {
           name: '/Weather',
           page: () => WeatherScreen(),
         ),
+        GetPage(
+          name: '/Information',
+          page: () => InformationScreen(),
+        ),
       ],
     );
   }
