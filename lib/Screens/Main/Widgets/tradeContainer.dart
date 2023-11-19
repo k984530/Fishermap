@@ -14,6 +14,16 @@ class TradeContainer extends StatefulWidget {
 }
 
 class _TradeContainerState extends State<TradeContainer> {
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      _selectedBoat = _boats[0];
+      _selectedPermit = _permits[0];
+      _selectedLocation = _locations[0];
+    });
+  }
+
   final Text txt = Text(
     "어선",
     style: TextStyle(
@@ -40,6 +50,37 @@ class _TradeContainerState extends State<TradeContainer> {
     ),
   );
 
+  String buyPrice = '2500';
+  String SellPrice = '2700';
+
+  final _boats = ['2톤급', '3톤급', '4톤급', '5톤급', '6톤급', '7톤급'];
+  final _permits = [
+    '통발',
+    '복합',
+    '자망',
+    '선망',
+    '들망',
+    '안간망',
+    '조망',
+    '선인망',
+  ];
+  final _locations = [
+    '무관',
+    '부산',
+    '인천',
+    '강원',
+    '경기',
+    '경북',
+    '충남',
+    '전북',
+    '울산',
+    '전남',
+    '제주',
+    '경남',
+  ];
+  String _selectedBoat = '';
+  String _selectedPermit = '';
+  String _selectedLocation = '';
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -127,21 +168,27 @@ class _TradeContainerState extends State<TradeContainer> {
                     SizedBox(
                       height: 20,
                       child: DropdownButton(
+                        value: _selectedBoat,
+                        dropdownColor: Palate.ContainerColor,
                         iconDisabledColor: Colors.white,
                         iconEnabledColor: Colors.white,
                         underline: SizedBox.shrink(),
-                        items: [
-                          DropdownMenuItem(
-                            child: Text(
-                              "6톤급",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                              ),
-                            ),
-                          ),
-                        ],
-                        onChanged: (value) {},
+                        items: _boats
+                            .map((e) => DropdownMenuItem(
+                                value: e,
+                                child: Text(
+                                  e,
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                )))
+                            .toList(),
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedBoat = value!;
+                            buyPrice = '3500';
+                            SellPrice = '3800';
+                          });
+                        },
                         elevation: 0,
                       ),
                     ),
@@ -153,16 +200,38 @@ class _TradeContainerState extends State<TradeContainer> {
                 child: Row(
                   children: [
                     Text(
-                      '허가 : 연합복합',
+                      '허가 : ',
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.white,
                       ),
                     ),
-                    Spacer(),
-                    Icon(
-                      Icons.arrow_drop_down,
-                      color: Colors.white,
+                    SizedBox(
+                      height: 20,
+                      child: DropdownButton(
+                        value: _selectedPermit,
+                        dropdownColor: Palate.ContainerColor,
+                        iconDisabledColor: Colors.white,
+                        iconEnabledColor: Colors.white,
+                        underline: SizedBox.shrink(),
+                        items: _permits
+                            .map((e) => DropdownMenuItem(
+                                value: e,
+                                child: Text(
+                                  e,
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
+                                )))
+                            .toList(),
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedPermit = value!;
+                            buyPrice = '4500';
+                            SellPrice = '5800';
+                          });
+                        },
+                        elevation: 0,
+                      ),
                     ),
                   ],
                 ),
@@ -176,7 +245,7 @@ class _TradeContainerState extends State<TradeContainer> {
           child: Column(
             children: [
               Text(
-                "2500만원",
+                buyPrice + "만원",
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.white,
@@ -188,7 +257,7 @@ class _TradeContainerState extends State<TradeContainer> {
                 color: Colors.white,
               ),
               Text(
-                "2600만원",
+                SellPrice + "만원",
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.white,
@@ -201,7 +270,7 @@ class _TradeContainerState extends State<TradeContainer> {
           bottom: 25,
           right: 10,
           child: Text(
-            "더보기 >>",
+            "더보기",
             style: TextStyle(
               fontSize: 10,
               color: Colors.white,
@@ -233,6 +302,7 @@ class _TradeContainerState extends State<TradeContainer> {
           bottom: 60,
           right: 5,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "위치",
@@ -242,23 +312,29 @@ class _TradeContainerState extends State<TradeContainer> {
                 ),
               ),
               SizedBox(
-                width: 50,
-                child: Row(
-                  children: [
-                    Text(
-                      "무관",
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Spacer(),
-                    Icon(
-                      Icons.arrow_drop_down,
-                      color: Colors.white,
-                      size: 23,
-                    ),
-                  ],
+                height: 20,
+                child: DropdownButton(
+                  value: _selectedLocation,
+                  dropdownColor: Palate.ContainerColor,
+                  iconDisabledColor: Colors.white,
+                  iconEnabledColor: Colors.white,
+                  underline: SizedBox.shrink(),
+                  items: _locations
+                      .map((e) => DropdownMenuItem(
+                          value: e,
+                          child: Text(
+                            e,
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                          )))
+                      .toList(),
+                  onChanged: (value) {
+                    setState(() {
+                      _selectedLocation = value!;
+                      buyPrice = '6500';
+                      SellPrice = '7800';
+                    });
+                  },
+                  elevation: 0,
                 ),
               ),
             ],
