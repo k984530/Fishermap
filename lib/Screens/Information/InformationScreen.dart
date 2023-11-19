@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InformationScreen extends StatelessWidget {
   InformationScreen({super.key});
@@ -52,53 +53,59 @@ class InformationScreen extends StatelessWidget {
           padding: EdgeInsets.all(10),
           itemCount: entry.length,
           itemBuilder: (BuildContext context, int index) {
-            return Column(
-              children: [
-                Container(
-                  padding:
-                      EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 15),
-                  height: 125,
-                  width: double.infinity,
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '${entry[index]}',
-                          style: TextStyle(
-                            fontSize: 16,
-                            letterSpacing: 2.0,
-                            color: Colors.black,
+            return GestureDetector(
+              onTap: () async {
+                String url = "https://pub.dev/packages/url_launcher";
+                await launchUrl(Uri.parse(url));
+              },
+              child: Column(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(
+                        left: 20, right: 20, top: 15, bottom: 15),
+                    height: 125,
+                    width: double.infinity,
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '${entry[index]}',
+                            style: TextStyle(
+                              fontSize: 16,
+                              letterSpacing: 2.0,
+                              color: Colors.black,
+                            ),
                           ),
-                        ),
-                        Text(
-                          '${homePage[index]}',
-                          style: TextStyle(
-                            fontSize: 14,
-                            letterSpacing: 2.0,
-                            color: Colors.black54,
+                          Text(
+                            '${homePage[index]}',
+                            style: TextStyle(
+                              fontSize: 14,
+                              letterSpacing: 2.0,
+                              color: Colors.black54,
+                            ),
                           ),
+                        ],
+                      ),
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.blueGrey,
+                          offset: Offset(0, 3),
+                          blurRadius: 2,
                         ),
                       ],
                     ),
                   ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(5),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.blueGrey,
-                        offset: Offset(0, 3),
-                        blurRadius: 2,
-                      ),
-                    ],
+                  Container(
+                    height: 10,
                   ),
-                ),
-                Container(
-                  height: 10,
-                ),
-              ],
+                ],
+              ),
             );
           },
         ),
