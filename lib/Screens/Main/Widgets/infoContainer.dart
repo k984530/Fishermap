@@ -1,8 +1,10 @@
 import 'dart:math';
 
+import 'package:fishermap/Palate.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/leftEye.dart';
 import 'package:fishermap/Screens/Main/Widgets/Custom/leftMouse.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:zwidget/zwidget.dart';
 
 import '../../../Palate.dart';
@@ -151,6 +153,22 @@ class InfoContainer extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+        Positioned(
+          bottom: 10,
+          right: 10,
+          child: GestureDetector(
+            onTap: () {
+              Get.toNamed('/Information');
+            },
+            child: Text(
+              "더보기",
+              style: TextStyle(
+                fontSize: 10,
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
       ],
