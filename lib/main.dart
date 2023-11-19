@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       // home: MainScreen(),
-      home: InformationScreen(),
+      home: MainScreen(),
       getPages: [
         GetPage(
           name: '/Main',
